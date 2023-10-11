@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private float _playerInputVertical;
     private Rigidbody2D _rBody2D;
     //private GroundSensor _sensor;
-    private Animator _animator;
+    [SerializeField]private Animator _animator;
     
     SpriteRenderer spriterenderer;
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         spriterenderer = GetComponentInChildren<SpriteRenderer>();
        _rBody2D = GetComponent <Rigidbody2D>();
        //_sensor = GetComponentInChildren<GroundSensor>();
-       _animator = GetComponentInChildren<Animator>();
+       
        
     }
 
@@ -42,12 +42,12 @@ public class Player : MonoBehaviour
 
         if(_playerInputHorizontal > 0)
         {
-            spriterenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0,0,0);
         }
 
         if(_playerInputHorizontal < 0)
         {
-            spriterenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0,180,0);
         }
     }
 
