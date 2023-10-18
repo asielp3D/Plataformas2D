@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 536200520}
   - component: {fileID: 536200521}
   - component: {fileID: 536200522}
+  - component: {fileID: 536200523}
   m_Layer: 0
   m_Name: rogue
   m_TagString: Untagged
@@ -775,6 +776,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &536200523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536200519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24db618326bf3343a3c4a990be8e818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643349627
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +914,8 @@ PlayableDirector:
     value: {fileID: 1544852985}
   - key: {fileID: -6092472526265764305, guid: 99ba07765243e5e49b9ba4901b4f5aad, type: 2}
     value: {fileID: 475927087}
+  - key: {fileID: -2072960520588000021, guid: 99ba07765243e5e49b9ba4901b4f5aad, type: 2}
+    value: {fileID: 1048799180}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &700909773
@@ -1016,6 +1031,7 @@ GameObject:
   - component: {fileID: 1048799177}
   - component: {fileID: 1048799178}
   - component: {fileID: 1048799179}
+  - component: {fileID: 1048799180}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -1139,6 +1155,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1048799180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048799174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: f8e8528e4478ff345ac2a1745bbed71c, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1048799177}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: SignalTest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1144804864
 GameObject:
   m_ObjectHideFlags: 0
