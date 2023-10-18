@@ -6,6 +6,6 @@ public class PlayerAnimationEvent : MonoBehaviour
 {
     public void EventTest()
     {
-        Debug.Log("Estoy saltando");
+        //obj.SetActive(true);
     }
 }
