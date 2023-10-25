@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
        _rBody2D = GetComponent <Rigidbody2D>();
        //_sensor = GetComponentInChildren<GroundSensor>();
        
-       
+       Debug.Log(GameManager.instance.vidas);
     }
 
     // Update is called once per frame
@@ -93,6 +93,15 @@ public class Player : MonoBehaviour
     public void SignalTest()
     {
         Debug.Log("Señal recibida");
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if(other.gameObject.layer == 7)
+        {
+            SoundManager.instance.Death();
+        }
     }
 
 }
