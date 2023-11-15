@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4183518160346062558}
   - component: {fileID: 850124627593130659}
+  - component: {fileID: 2790798551185687277}
   - component: {fileID: 3222046586914384131}
   - component: {fileID: 7403735819377154297}
   m_Layer: 0
-  m_Name: 000_0010_star10
+  m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,6 +87,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2790798551185687277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228487409327002630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e309f9cb1a35684e9a484ce645891c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &3222046586914384131
 Animator:
   serializedVersion: 5
@@ -136,7 +149,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00480254, y: 0.008404493}
