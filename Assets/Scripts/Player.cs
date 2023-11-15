@@ -19,11 +19,13 @@ public class Player : MonoBehaviour
     [SerializeField]private PlayableDirector _director;
     
     SpriteRenderer spriterenderer;
+    SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
     {
         spriterenderer = GetComponentInChildren<SpriteRenderer>();
        _rBody2D = GetComponent <Rigidbody2D>();
+       soundManager = GameObject.Find("SoundManager").GetComponent <SoundManager>();
        //_sensor = GetComponentInChildren<GroundSensor>();
        
        Debug.Log(GameManager.instance.vidas);
@@ -88,6 +90,7 @@ public class Player : MonoBehaviour
     void Jump()
     {
          _rBody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+         soundManager.JumpSound();
     }
 
     public void SignalTest()
