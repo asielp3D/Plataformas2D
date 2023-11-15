@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField]AudioSource _sfxAudioSource;
 
     [SerializeField]private AudioClip deathSound;
+    [SerializeField]private AudioClip getStar;
 
    void Awake()
     {
@@ -33,5 +34,10 @@ public class SoundManager : MonoBehaviour
     public void Death()
     {
         _sfxAudioSource.PlayOneShot(deathSound);
+    }
+
+     public void GetStar()
+    {
+        _sfxAudioSource.PlayOneShot(getStar);
     }
 }
