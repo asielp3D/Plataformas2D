@@ -6,6 +6,7 @@ public class Stars : MonoBehaviour
 {
     
     SoundManager soundManager;
+    public int value;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Stars : MonoBehaviour
         {
             Destroy(this.gameObject);
             soundManager.GetStar();
+            StarCounter.instance.IncreaseStars(value);
         }
     }
 
