@@ -10,7 +10,7 @@ public class BGMManager : MonoBehaviour
     
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         source = GetComponent<AudioSource>();
 
         source.clip = bgmMusic;

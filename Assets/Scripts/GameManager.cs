@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver;
 
+    public Stars counter;
+
+    public int val = 0;
+
+
+
+
 
 
     // Start is called before the first frame update
@@ -33,6 +40,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
         Invoke("LoadScene", 2f);
         //StartCoroutine("LoadScene");
+    }
+
+    public void Win()
+    {
+        val += 1;
+
+        if(val == 5)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     void LoadScene()

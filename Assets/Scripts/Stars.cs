@@ -26,7 +26,10 @@ public class Stars : MonoBehaviour
             Destroy(this.gameObject);
             soundManager.GetStar();
             StarCounter.instance.IncreaseStars(value);
+            GameManager.instance.Win();
         }
+
+
     }
 
     
