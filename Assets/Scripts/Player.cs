@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -104,7 +105,13 @@ public class Player : MonoBehaviour
         if(other.gameObject.layer == 7)
         {
             SoundManager.instance.Death();
+            GameManager.instance.GameOver();
         }
+    }
+
+    public void Muerte()
+    {
+        Destroy(gameObject);
     }
 
 }
